@@ -1,0 +1,290 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Wingdings;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs48\lang22 Exercicos dia 24/08\par
+
+\pard\sa200\sl276\slmult1\par
+\fs22\tab\tab //1) Jo\'e3o, homem de bem, comprou um microcomputador para controlar o rendimento di\'e1rio\par
+//de seu trabalho. Toda vez que ele traz um peso de tomate maior que o estabelecido pelo\par
+//regulamento do estado de S\'e3o Paulo (50 quilos) deve pagar um multa de R$ 4,00 por quilo\par
+//excedente. Jo\'e3o precisa que voc\'ea fa\'e7a um sistema que leia a vari\'e1vel P (peso de tomates) e\par
+//verifique se h\'e1 excesso. Se houver, gravar na vari\'e1vel E (Excesso) e na vari\'e1vel M o valor\par
+//da multa que Jo\'e3o dever\'e1 pagar. Caso contr\'e1rio mostrar tais vari\'e1veis com o conte\'fado\par
+//ZERO\b0 .\par
+\b\fs48\par
+\b0\fs22 programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab inteiro P,E,M\par
+\tab escreva("\\nQual o peso dos tomates?: ")\par
+\tab leia(P)\par
+\par
+\tab se (P >= 50) \{\par
+\tab\tab E = P - 50\par
+\tab\tab M = E * 4\par
+\tab\tab escreva("\\nO valor da multa sera R$", M)\par
+\tab\tab\par
+\tab\tab\}\par
+\par
+\tab\}\par
+\}\par
+\b\tab\tab //2) Elabore um sistema que leia as vari\'e1veis C e N, respectivamente c\'f3digo e n\'famero de\par
+//horas trabalhadas de um oper\'e1rio. E calcule o sal\'e1rio sabendo-se que ele ganha R$ 10,00\par
+//por hora. Quando o n\'famero de horas exceder a 50 calcule o excesso de pagamento\par
+//armazenando-o na vari\'e1vel E, caso contr\'e1rio zerar tal vari\'e1vel. A hora excedente de\par
+//trabalho vale R$ 20,00. No final do processamento imprimir o sal\'e1rio total e o sal\'e1rio\par
+//excedente.\par
+\b0\par
+programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab real C,N,E, salTotal = 0.0, salExce = 0.0\par
+\par
+\tab escreva("\\nQual o codigo do operario?: ")\par
+\tab leia(C)\par
+\tab escreva("\\nQual a quantidade de horas trabalhadas?: ")\par
+\tab leia(N)\par
+\par
+\tab se (N > 50) \{ \par
+\par
+\tab\tab\tab E = N - 50\par
+\tab\tab\tab salExce = E * 20\par
+\tab\tab\tab salTotal = N * 10.00 + salExce\par
+\par
+\tab\tab\tab escreva("\\nO sal\'e1rio excedente do funcionario ", C," \'e9 R$", salExce," e o sal\'e1rio total \'e9 R$",salTotal)\par
+\tab\tab\par
+\tab\tab\}senao\{\par
+\tab\tab\tab\par
+\par
+\tab\tab\tab salTotal = N * 10.00 + salExce\par
+\par
+\tab\tab\tab escreva("\\nO sal\'e1rio total do funcionario ", C," \'e9 R$", salTotal)\par
+\tab\tab\tab\par
+\tab\tab\tab\}\par
+\par
+\par
+\tab\}\par
+\}\par
+\b //3) Desenvolva um sistema em que:\par
+//\f1   \f0 Leia 4 (quatro) n\'fameros;\par
+//\f1  \f0 Calcule o quadrado de cada um;\par
+//\f1  \f0 Se o valor resultante do quadrado do terceiro for >= 1000, imprima-o e finalize;\par
+//\f1  \f0 Caso contr\'e1rio, imprima os valores lidos e seus respectivos quadrados.\par
+\b0\par
+\par
+programa\par
+\{\par
+\tab inclua biblioteca Matematica-->mat\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\tab\tab inteiro N1,N2,N3,N4,quad,quad1,quad2,quad4\par
+\par
+\tab\tab escreva("\\nDigite primeiro numero para descobrir seu valor ao quadrado: ")\par
+\tab\tab leia(N1)\par
+\tab\tab escreva("\\nDigite segundo numero para descobrir seu valor ao quadrado: ")\par
+\tab\tab leia(N2)\par
+\tab\tab escreva("\\nDigite terceiro numero para descobrir seu valor ao quadrado: ")\par
+\tab\tab leia(N3)\par
+\tab\tab escreva("\\nDigite quarto numero para descobrir seu valor ao quadrado: ")\par
+\tab\tab leia(N4)\par
+\par
+\tab\tab se (N3*N3 >=1000)\{\par
+\par
+\tab\tab\tab quad = N3*N3\par
+\par
+\tab\tab\tab escreva("\\nO valor deste numero ao quadrado \'e9 ",quad)\par
+\tab\tab\tab  \par
+\tab\tab\tab\}senao\{\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab quad1 = N1 * N1\par
+\tab\tab\tab\tab quad2 = N2 * N2\par
+\tab\tab\tab\tab quad4 = N4 * N4\par
+\par
+\tab\tab\tab\tab escreva("\\nO valor ao quadrado do ",N1," \'e9:\\n", quad1,"\\nO valor ao quadrado do ",N2," \'e9\\n",quad2,"\\nO valor ao quadrado do ",N4," \'e9\\n",quad4)\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab\}\par
+\tab\}\par
+\}\b\tab //\tab 4) Fa\'e7a um sistema que leia um n\'famero inteiro e mostre uma mensagem //indicando se este\par
+//n\'famero \'e9 par ou \'edmpar, e se \'e9 positivo ou negativo.\par
+\b0\par
+programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab inteiro num,par,impar,pos,neg\par
+\tab\par
+\par
+\tab escreva("\\nDigite um numero?")\par
+\tab leia(num)\par
+\par
+\tab se (num % 2 == 0 e num >= 0)\{\par
+\tab\tab\par
+\tab\tab escreva("\\nEste numero \'e9 par e \'e9 positivo")\par
+\tab\tab\}senao se (num % 2 == 0 e num < 0)\{\par
+\par
+\tab\tab escreva("\\nEste numero \'e9 par e \'e9 negativo")\par
+\tab\tab\tab\par
+\tab\tab\tab\par
+\tab\tab\tab\}se (num %2 != 0 e num >= 0)\{\par
+\par
+\tab\tab\tab\tab escreva("\\nEste numero \'e9 impar e \'e9 positivo")\par
+\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab\}senao se (num%2 != 0 e  num < 0)\{\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab escreva("\\nEste numero \'e9 impar e \'e9 negativo")\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\}senao\{\par
+\tab\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\}\par
+\}\par
+\b //\tab\tab 5) A Secretaria de Meio Ambiente que controla o \'edndice de polui\'e7\'e3o mant\'e9m 3 grupos de\par
+//ind\'fastrias que s\'e3o altamente poluentes do meio ambiente. O \'edndice de polui\'e7\'e3o aceit\'e1vel\par
+//varia de 0,05 at\'e9 0,25. Se o \'edndice sobe para 0,3 as ind\'fastrias do 1\'ba grupo s\'e3o intimadas a\par
+//suspenderem suas atividades, se o \'edndice crescer para 0,4 as industrias do 1\'ba e 2\'ba grupo s\'e3o\par
+//intimadas a suspenderem suas atividades, se o \'edndice atingir 0,5 todos os grupos devem ser\par
+//notificados a paralisarem suas atividades. Fa\'e7a um sistema que leia o \'edndice de polui\'e7\'e3o\par
+//medido e emita a notifica\'e7\'e3o adequada aos diferentes grupos de empresas.\par
+\b0\par
+programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab real indPol\par
+\par
+\tab escreva("\\nQual o indice de polui\'e7\'e3o?: ")\par
+\tab leia(indPol)\par
+\par
+\tab se (indPol >= 0.3 e indPol < 0.4)\{\par
+\par
+\tab\tab escreva("\\nInd\'fastrias do 1\'ba grupo suspendendam suas atividades")\par
+\tab\tab\par
+\tab\tab\}senao se ( indPol >= 0.4 e indPol < 0.5)\{\par
+\tab\tab\tab\par
+\tab\tab\tab escreva("\\nIndustrias do 1\'ba e 2\'ba grupo suspendam suas atividades")\par
+\tab\tab\tab\par
+\tab\tab\tab\}se (indPol >= 0.5) \{\par
+\par
+\tab\tab\tab\tab\tab escreva("\\ntodos os grupos devem paralisarem suas atividades")\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab\}senao\{\par
+\tab\tab\tab\tab\tab\}\par
+\par
+\par
+\par
+\}\par
+\tab\tab\b //6) Elabore um sistema que dada a idade de um nadador classifique-o em uma das seguintes\par
+//categorias:\par
+//Infantil A = 5 a 7 anos\par
+//Infantil B = 8 a 11 anos\par
+//Juvenil A = 12 a 13 anos\par
+//Juvenil B = 14 a 17 anos\par
+//Adultos \b0 = \b Maiores de 18 anos\par
+\b0\par
+programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab inteiro idade = 0\par
+\par
+\tab escreva("\\nEm qual categoria de idade voc\'ea se encaixa? Selecione uma op\'e7\'e3o:\\n1 = 5 a 7 anos, 2 = 8 a 11 anos, 3 = 12 a 13 anos, 4 = 14 a 17 anos ou 5 se voc\'ea for maior de 18 anos\\n")\par
+\tab leia(idade)\par
+\par
+\tab escolha(idade)\{\par
+\tab\tab\par
+\tab\tab caso 1:\par
+\tab\tab\tab escreva("Infantil A ")\par
+\tab\tab\tab pare\par
+\tab\tab caso 2:\par
+\tab\tab\tab escreva("Infantil B ")\par
+\tab\tab\tab pare\par
+\tab\tab caso 3:\par
+\tab\tab\tab escreva("Juvenil A ")\par
+\tab\tab\tab pare\par
+\tab\tab caso 4:\par
+\tab\tab\tab escreva("Juvenil B")\par
+\tab\tab\tab pare\par
+\tab\tab caso 5:\par
+\tab\tab\tab escreva("Adultos")\par
+\tab\tab\tab\par
+\tab\tab\par
+\tab\tab\}\par
+\par
+\tab\par
+\tab\}\par
+\}\par
+\tab\tab\b //7) Receber valores de base e altura de um tri\'e2ngulo e verificar se s\'e3o valores v\'e1lidos\par
+//(positivos maiores que zero). Em caso afirmativo, calcular a \'e1rea do tri\'e2ngulo.\par
+\b0\par
+programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab real base,altura,area\par
+\par
+\tab escreva("\\nQual a base do trinagulo?: ")\par
+\tab leia(base)\par
+\tab escreva("\\nQual a altura do trinagulo?: ")\par
+\tab leia(altura)\par
+\tab\par
+\tab se (base > 0 e altura > 0)\{\par
+\tab\tab\par
+\tab\tab area = base * altura\par
+\par
+\tab\tab escreva("\\nA ar\'e9a do triangulo \'e9: ",area)\par
+\tab\tab\}senao\{\par
+\par
+\tab\tab\tab escreva("\\nEsses n\'e3o s\'e3o valores v\'e1lidos ")\tab\tab\tab\par
+\tab\tab\tab\}\par
+\par
+\tab\}\par
+\}\par
+\par
+\b\tab\tab //8) Construa um sistema para ler uma vari\'e1vel num\'e9rica N e imprimi-la somente se a mesma\par
+//for maior que 100, caso contr\'e1rio imprimi-la com o valor zero.\par
+\b0\par
+programa\par
+\{\par
+\tab\par
+\tab funcao inicio()\par
+\tab\{\par
+\par
+\tab inteiro N\par
+\par
+\tab escreva("\\nDigite um numero: ")\par
+\tab leia(N)\par
+\par
+\tab se (N > 100)\{\par
+\tab\tab\par
+\tab\tab escreva("\\nO numero \'e9 ",N)\par
+\tab\tab\par
+\tab\tab\}senao\{\par
+\par
+\tab\tab\tab N = 0\par
+\tab\tab\tab\par
+\tab\tab\tab escreva("\\nO valor do numero \'e9 ",N)\par
+\tab\tab\tab\par
+\tab\tab\tab\}\par
+\par
+\tab\}\par
+\}\par
+\par
+}
+ 
